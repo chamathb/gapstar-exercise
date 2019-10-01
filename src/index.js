@@ -1,8 +1,16 @@
+const log4js = require('log4js');
+const path = require("path");
 const { getRandomWordSync, getRandomWord } = require('word-maker');
+
 
 console.log('It works!');
 
 // YOUR CODE HERE
+log4js.configure({
+  appenders: { file: { type: 'file', filename: path.join(process.env.PWD, 'exercise.log') } },
+  categories: { default: { appenders: ['file'], level: 'debug' } }
+});
+const logger = log4js.getLogger();
 /**
  * @description prints 1 to `numberOfTimes` with use of randomWordSync
  * @param numberOfTimes - accepts positive integer
@@ -32,7 +40,7 @@ const printNumbersWordsAndFizzBuzz = (numberOfTimes) => {
         errorMessage = "It shouldn't break anything!";
       }
       const nonErrorPrintable = `${(i%3 ? '':'Fizz')+(i%5 ? '':'Buzz') || word}`;
-        console.log( `${i}: ${(errorMessage != null)? errorMessage : nonErrorPrintable}`);
+        logger.debug( `${i}: ${(errorMessage != null)? errorMessage : nonErrorPrintable}`);
     }
   } else {
     console.log('Positive number input is required');
@@ -68,7 +76,7 @@ const getFormattedStringWithNumbersAndFizzBuzz = async(numberOfTimes, i) => {
   }
   if(numberOfTimes > 0){
     const nonErrorPrintable = `${(i%3 ? '':'Fizz')+(i%5 ? '':'Buzz') || word}`;
-    console.log(`${i}: ${(errorMessage != null)? errorMessage : nonErrorPrintable}`);
+    logger.debug(`${i}: ${(errorMessage != null)? errorMessage : nonErrorPrintable}`);
     return await getFormattedStringWithNumbersAndFizzBuzz(numberOfTimes - 1, i + 1);
   }
 };
