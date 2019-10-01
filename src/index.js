@@ -76,6 +76,7 @@ const getFormattedStringWithNumbersAndFizzBuzz = async(numberOfTimes, i) => {
 
 /**
  * uncomment to see first task
+ * no modification added after
  */
 //printNumbersWithRandomWords(100);
 
@@ -86,6 +87,7 @@ printNumbersWordsAndFizzBuzz(100);
 
 /**
  * first task with asynchronous getRandomWord with support of recursion
+ * no modification added after
  */
 //getFormattedStringWithNumbers(100, 1);
 
