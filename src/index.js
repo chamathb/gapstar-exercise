@@ -14,7 +14,7 @@ const printNumbersWithRandomWords = (numberOfTimes) => {
       console.log(`${i}: ${word}`)
     }
   } else {
-    console.log('Positive number input is required')
+    console.log('Positive number input is required');
   }
 };
 
@@ -26,10 +26,10 @@ const printNumbersWordsAndFizzBuzz = (numberOfTimes) => {
   if(!isNaN(numberOfTimes) && numberOfTimes > 0){
     for(let i=1; i <= numberOfTimes; i++) {
       const word = getRandomWordSync({ withErrors: false });
-      console.log( `${i}: ${(i%3 ? '':'Fizz')+(i%5 ? '':'Buzz') || word}`)
+      console.log( `${i}: ${(i%3 ? '':'Fizz')+(i%5 ? '':'Buzz') || word}`);
     }
   } else {
-    console.log('Positive number input is required')
+    console.log('Positive number input is required');
   }
 };
 
