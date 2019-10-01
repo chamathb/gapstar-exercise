@@ -103,4 +103,14 @@ printNumbersWordsAndFizzBuzz(100);
  * second task with asynchronous getRandomWord with support of recursion
  * modified to handle errors
  */
+
 getFormattedStringWithNumbersAndFizzBuzz(100, 1);
+
+
+/*const runPerformance = async() => {
+  console.time("slowOption");
+  await getFormattedStringWithNumbersAndFizzBuzz(100, 1);
+  console.timeEnd("slowOption");
+};
+
+runPerformance();*/
