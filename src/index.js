@@ -104,7 +104,9 @@ printNumbersWordsAndFizzBuzz(100);
  * modified to handle errors
  */
 
-getFormattedStringWithNumbersAndFizzBuzz(100, 1);
+getFormattedStringWithNumbersAndFizzBuzz(100, 1).then(()=>{
+  console.log("completed");
+});
 
 
 /*const runPerformance = async() => {
