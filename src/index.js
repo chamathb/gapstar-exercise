@@ -54,8 +54,8 @@ const printNumbersWordsAndFizzBuzz = (numberOfTimes) => {
  * @returns {Promise.<void>}
  */
 const getFormattedStringWithNumbers = async(numberOfTimes, i) => {
-  const word = await getRandomWord({ withErrors : false, slow : true });
   if(numberOfTimes > 0){
+    const word = await getRandomWord({ withErrors : false, slow : true });
     console.log(`${i}: ${word}`);
     return await getFormattedStringWithNumbers(numberOfTimes - 1, i +1);
   }
@@ -68,13 +68,13 @@ const getFormattedStringWithNumbers = async(numberOfTimes, i) => {
  * @returns {Promise.<void>}
  */
 const getFormattedStringWithNumbersAndFizzBuzz = async(numberOfTimes, i) => {
-  let word, errorMessage=null;
-  try{
-    word = await getRandomWord({ withErrors : true, slow : true });
-  } catch (e) {
-    errorMessage = "It shouldn't break anything!";
-  }
   if(numberOfTimes > 0){
+    let word, errorMessage=null;
+    try{
+      word = await getRandomWord({ withErrors : true, slow : true });
+    } catch (e) {
+      errorMessage = "It shouldn't break anything!";
+    }
     const nonErrorPrintable = `${(i%3 ? '':'Fizz')+(i%5 ? '':'Buzz') || word}`;
     logger.debug(`${i}: ${(errorMessage != null)? errorMessage : nonErrorPrintable}`);
     return await getFormattedStringWithNumbersAndFizzBuzz(numberOfTimes - 1, i + 1);
