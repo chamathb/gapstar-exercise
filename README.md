@@ -44,7 +44,8 @@ returns a Promise, which resolves to a random word string.
 part of your solution does not need to actually run)
 
 
-## Bonus
+
+### Bonus
 
 * The numbers should be printed in ascending order.
 * Imagine `getRandomWord`'s implementation is slow and takes 500ms to complete (call `getRandomWord({ slow: true })` to emulate this). Can you make your solution run in less than 1000ms with the `slow` option turned on?
