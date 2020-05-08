@@ -11,7 +11,7 @@ function getRandomWord({ withErrors = false, slow = false } = {}) {
     return new Promise((resolve, reject) => {
         setTimeout(
             () => withErrors && randomInRange(0, 5) === 5 ? reject(new Error('It failed!')) : resolve(randomWords()),
-            slow ? 8 : 0
+            slow ? 500 : 0
         );
     });
 }
