@@ -1,6 +1,3 @@
-Harver JS Exercise
-============================
-
 ## Get started
 
 Set this repository up by running:
@@ -15,7 +12,7 @@ The tasks in this assessment use the included package `word-maker` which can be 
 `./word-maker`. This directory also contains a *README.md* with details about its usage and API. The module
 is already *required* for you in `src/index.js`
 
-## Tasks
+## Challenge
 
 Complete these tasks in order. If you can't complete a task, just proceed with the next one.
 
@@ -46,6 +43,8 @@ returns a Promise, which resolves to a random word string.
  * **Frontend developers**, send your result to an HTTP endpoint (since there is no running endpoint, this
 part of your solution does not need to actually run)
 
-**Bonus:**
+
+## Bonus
+
 * The numbers should be printed in ascending order.
 * Imagine `getRandomWord`'s implementation is slow and takes 500ms to complete (call `getRandomWord({ slow: true })` to emulate this). Can you make your solution run in less than 1000ms with the `slow` option turned on?
